@@ -1,0 +1,237 @@
+/* 🌈 PALETA MODERNA MORADA */
+:root {
+  --morado: #6A1B9A;
+  --morado-oscuro: #4A148C;
+  --lila: #F3E5F5;
+  --azul-morado: #512DA8;
+  --blanco: #ffffff;
+  --sombra: rgba(80, 0, 100, 0.25);
+  --radius: 12px;
+  --transicion: 0.3s ease;
+  --fuente: "Verdana", sans-serif;
+}
+
+/* 🎨 FONDO GENERAL */
+body {
+  font-family: var(--fuente);
+  margin: 0;
+  background: linear-gradient(135deg, #ede7f6, #d1c4e9, #b39ddb);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🟣 ENCABEZADO MODERNO */
+.topbar {
+  background: linear-gradient(90deg, var(--morado), var(--azul-morado));
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.2rem 0;
+  box-shadow: 0 4px 10px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* 🧱 TARJETA PRINCIPAL */
+.container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--blanco);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 18px var(--sombra);
+  animation: fadeSlide 0.8s ease;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(80, 0, 100, 0.3);
+}
+
+/* 🧾 TITULOS CON LÍNEA ANIMADA */
+h2 {
+  color: var(--morado-oscuro);
+  text-align: center;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--morado), var(--azul-morado));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+h2:hover::after {
+  width: 130px;
+}
+
+/* 🧩 FORMULARIO */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border var(--transicion), box-shadow var(--transicion);
+}
+
+input:focus, select:focus {
+  border-color: var(--morado);
+  box-shadow: 0 0 6px rgba(106, 27, 154, 0.3);
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* 🟣 BOTONES */
+button {
+  background: linear-gradient(90deg, var(--morado), var(--azul-morado));
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  margin: 0 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.4);
+}
+
+.buttons {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* 🪶 MENSAJES */
+.mensaje {
+  grid-column: span 2;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* 📋 TABLA ESTILIZADA */
+.table-section {
+  margin-top: 3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--sombra);
+  animation: fadeSlide 0.8s ease;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+th {
+  background: linear-gradient(90deg, var(--morado), var(--azul-morado));
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f0ff;
+}
+
+tr:hover {
+  background-color: #ede7f6;
+  transition: 0.3s;
+}
+
+/* 💫 LOGIN CARD */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.login-card {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px var(--sombra);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fadeSlide 0.8s ease;
+}
+
+.login-card h2 {
+  color: var(--azul-morado);
+}
+
+.login-desc {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  color: var(--morado);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* 🦶 FOOTER */
+.footer {
+  text-align: center;
+  background: linear-gradient(90deg, var(--morado-oscuro), var(--azul-morado));
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* 🎞️ ANIMACIONES */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

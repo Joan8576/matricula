@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Matrícula Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1> Sistema de Matrícula Escolar</h1>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Formulario de Registro</h2>
+
+      <form id="formMatricula">
+        <div class="form-grid">
+          <div>
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" placeholder=" Juan Pérez">
+          </div>
+
+          <div>
+            <label for="cedula">Cédula o ID *</label>
+            <input type="text" id="cedula" placeholder=" 1-1234-5678">
+          </div>
+
+          <div>
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="nacimiento">
+          </div>
+
+          <div>
+            <label for="grado">Grado a matricular *</label>
+            <select id="grado">
+              <option value="">Seleccione...</option>
+              <option>1°</option>
+              <option>2°</option>
+              <option>3°</option>
+              <option>4°</option>
+              <option>5°</option>
+              <option>6°</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="encargado">Encargado/a *</label>
+            <input type="text" id="encargado" placeholder="Nombre del encargado">
+          </div>
+
+          <div>
+            <label for="telefono">Teléfono de contacto *</label>
+            <input type="tel" id="telefono" placeholder="Ej: 8888-9999">
+          </div>
+
+          <div>
+            <label for="correo">Correo electrónico (opcional)</label>
+            <input type="email" id="correo" placeholder="Ej: ejemplo@mail.com">
+          </div>
+
+          <div>
+            <label>Sección *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="seccion" value="A"> A</label>
+              <label><input type="radio" name="seccion" value="B"> B</label>
+              <label><input type="radio" name="seccion" value="C"> C</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" id="btnMatricular">Matricular</button>
+          <button type="reset" id="btnLimpiar">Limpiar</button>
+        </div>
+
+        <p id="mensaje" class="mensaje"></p>
+      </form>
+    </section>
+
+    <section class="tabla-section">
+      <h2> Estudiantes Matriculados</h2>
+      <table id="tablaEstudiantes">
+        <thead>
+          <tr>
+            <th># Matrícula</th>
+            <th>Nombre</th>
+            <th>Cédula</th>
+            <th>Fecha Nac.</th>
+            <th>Grado</th>
+            <th>Encargado</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Sección</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 — Desarrollado por Joan Alonso Flores Villalobos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

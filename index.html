@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión — Sistema de Matrícula</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1> Sistema de Matrícula Escolar</h1>
+  </header>
+
+  <main class="container login-container">
+    <section class="login-card">
+      <h2>Iniciar Sesión</h2>
+      <p class="login-desc">Ingrese sus credenciales para acceder al sistema</p>
+
+      <form id="formLogin">
+        <div>
+          <label for="usuario">Usuario </label>
+          <input type="text" id="usuario" placeholder="Ingrese su usuario">
+        </div>
+
+        <div>
+          <label for="password">Contraseña </label>
+          <input type="password" id="password" placeholder="Ingrese su contraseña">
+        </div>
+
+        <div class="buttons">
+          <button type="submit">Ingresar</button>
+          <button type="reset">Limpiar</button>
+        </div>
+
+        <p id="mensajeLogin" class="mensaje"></p>
+
+        <p class="login-desc">
+  ¿No tienes cuenta?
+  <a href="registro.html" class="link">Crear una nueva</a>
+</p>
+
+      </form>
+
+       
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 — Desarrollado por Joan Alonso Flores Villalobos</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>
